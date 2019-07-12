@@ -3,7 +3,7 @@
 Hello, and welcome to www.planthemagic.com the site to assist in planning your **Walt Disney World** stay. 
 
 # About
-Plan the Magic assists in planning which attractions to focus on at the **Happiest Place on Earth** [Walt Disney World]([[https://disneyworld.disney.go.com/]]) as there is so much to do and so little time!
+Plan the Magic assists in planning which attractions to focus on at the **Happiest Place on Earth** [Walt Disney World](https://disneyworld.disney.go.com/) as there is so much to do and so little time!
 > **ProTip:** You can create a **FastPass** on your must see attractions.
 
 ## Audience
@@ -17,4 +17,4 @@ Disney World **Fans**
 
 ## Credits
 
-- content provided by: [Disney]([[https://disneyworld.disney.go.com/]])
+- content provided by: [Disney](https://disneyworld.disney.go.com/)
