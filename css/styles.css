@@ -11,6 +11,10 @@ body {
     -ms-user-select: none;
     user-select: none;
   }
+
+ #regbtn {
+   float: right;
+ }
 footer p {
     float: right;
 }
