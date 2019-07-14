@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,6 +42,10 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Attractions</a>
                 </li>
+            </ul>
+            </div>
+    <!-- End of Nav -->
+        </nav>
 
                 <!--  <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -59,11 +61,10 @@
                     <input class="form-control ml-sm-2" type="text" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form> -->
-        </div>
-        <!-- End of Nav -->
-    </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+        
+
+    <!-- Main jumbotron -->
     <header>
         <div class="jumbotron">
             <div class="container col-md-6">
@@ -85,12 +86,12 @@
                     <div class="col">
                         <label for="inputFirstName">First Name</label>
                         <input type="text" class="form-control" id="inputFirstName" placeholder="First name" autofocus
-                            min="2" max="25">
+                            minlength="2" maxlength="25">
                     </div>
                     <div class="col">
                         <label for="inputLastName">Last Name</label>
-                        <input type="text" class="form-control" id="inputLastName" placeholder="Last name" min="2"
-                            max="25">
+                        <input type="text" class="form-control" id="inputLastName" placeholder="Last name"
+                            minlength="2" maxlength="25">
                     </div>
                 </div>
 
@@ -172,34 +173,34 @@
                 </div>
 
                 <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
-                        </div>
-                        <div class="form-group col-md-2 offset-md-2">
-                                <label for="inputAge">Age</label>
-                                <input type="number" class="form-control" id="inputAge" placeholder="Age" min="18" max="80">
-                            </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
                     </div>
-    
-                    <div class="form-group">
-                        <label for="inputUsrName4">User Name</label>
-                        <input type="text" class="form-control" id="inputUsrName4" placeholder="UserName1234" required
-                            min="4" max="25">
+                    <div class="form-group col-md-2 offset-md-2">
+                        <label for="inputAge">Age</label>
+                        <input type="number" class="form-control" id="inputAge" placeholder="Age" min="18" max="80">
                     </div>
-    
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required
-                                min="4" max="25">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputConfirmPassword4">Confirm Password</label>
-                            <input type="password" class="form-control" id="inputConfirmPassword4"
-                                placeholder="Confirm Password" required min="4" max="25">
-                        </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputUsrName4">User Name</label>
+                    <input type="text" class="form-control" id="inputUsrName4" placeholder="UserName1234" required
+                        minlength="4" maxlength="25">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required
+                            minlength="4" maxlength="25">
                     </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputConfirmPassword4">Confirm Password</label>
+                        <input type="password" class="form-control" id="inputConfirmPassword4"
+                            placeholder="Confirm Password" required minlength="4" maxlength="25">
+                    </div>
+                </div>
 
 
 
@@ -318,32 +319,31 @@
 
                 <!-- Radios for hear about -->
                 <fieldset class="form-group">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                        <div class="col-sm-10">
+                        <legend class="row col-form-label col-sm-10 pt-0">How did you hear about us?</legend>
+                        <div class="col-sm-10 offset-md-2">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
                                     value="option1" checked>
                                 <label class="form-check-label" for="gridRadios1">
-                                    First radio
+                                    Friends
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
                                     value="option2">
                                 <label class="form-check-label" for="gridRadios2">
-                                    Second radio
+                                    Internet
                                 </label>
                             </div>
                             <div class="form-check disabled">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                    value="option3" disabled>
+                                    value="option3">
                                 <label class="form-check-label" for="gridRadios3">
-                                    Third disabled radio
+                                    Other
                                 </label>
+                                <input type="text" name="other_reason" placeholder="Other">
                             </div>
                         </div>
-                    </div>
                 </fieldset>
 
                 <!-- Checkbox -->
@@ -369,6 +369,7 @@
                 </div>
 
                 <!-- Buttons for registration -->
+                <br />
                 <div class="form-group row">
                     <div class="col-sm-10">
                         <a class="btn btn-outline-primary" href="login.html" id="regbtn" role="button">Log In</a>
