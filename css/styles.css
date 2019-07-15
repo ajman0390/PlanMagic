@@ -12,6 +12,7 @@ body {
     user-select: none;
   }
 
+
  #regbtn {
    float: right;
  }
@@ -20,6 +21,7 @@ footer p {
 }
 h1 {
   font-family: 'Josefin Sans', sans-serif;
+  padding: .4em;
 }
 
   // Extra small devices (portrait phones, less than 576px)
