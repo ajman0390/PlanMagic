@@ -12,6 +12,7 @@
 
   <!-- Added CSS file-->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/attractoins_styles.css">
 
   <!-- Google fonts stylesheet -->
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
@@ -39,29 +40,14 @@
           <a class="nav-link" href="register.html">Register</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="#">Attractions</a>
+          <a class="nav-link active" href="attractions.html">Attractions</a>
         </li>
-
-        <!--  <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Attractions</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-                
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control ml-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
+      </ul>
     </div>
-    <!-- End of Nav -->
   </nav>
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -71,102 +57,366 @@
         <h1 class="display-3 toph1">Plan the Magic!</h1>
         <p><img class="img-fluid bgTopImg" src="img/wdw-all.jpeg" alt="Walt Disney World"></p>
         <p>This is a site to assist in planning your Walt Disney World Vacation.</p>
-        <p id="firstBtn"class="offset-md-5" ><a class="btn btn-primary btn-lg" href="login.html" role="button">Login &raquo;</a></p> 
+        <p id="firstBtn" class="offset-md-5"><a class="btn btn-primary btn-lg" href="login.html" role="button">Login
+            &raquo;</a></p>
       </div>
     </div>
   </header>
 
-  <main role="main">
-
+  <main>
 
 
     <div class="container">
-            <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">Ranking</th>
-                        <th scope="col">Attractions</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Date</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Big Thunder Mountain</td>
-                        <td>12:45 PM</td>
-                        <td>05/29/2020</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
+      <h2>Manage Lists</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Ranking</th>
+            <th scope="col">Attractions</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Park</th>
+            <th scope="col">Notes</th>
+            <th colspan="2"><button type="button" class="btn btn-info">Print</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Big Thunder Mountain</td>
+            <td>05/29/2020</td>
+            <td>12:45 PM</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+                <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
+                      Edit
+                    </button>
+                    <br />
+              
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+                      aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+                <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
+                      Edit
+                    </button>
+                    <br />
+              
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+                      aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry the Bird</td>
+            <td>@twitter</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+                <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
+                      Edit
+                    </button>
+                    <br />
+              
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+                      aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+              <div class="container">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
+                  Edit
+                </button>
+                <br />
+          
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+                  aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
 
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Get Started</h2>
-          <!-- <img src="img/sm-PartnersStatue.jpg" alt="Partners Statue" class="prtnr img-thumbnail"> -->
-          <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
-          <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
-          <p><a class="btn btn-secondary" href="#" role="button">Start Journey &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Attractions</h2>
-          <img src="img/Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
-          <p>Review the Attractions on offer. </p>
-          <!-- <p><img class="prtnr" src="img/PartnersStatue.jpg" alt="Partners Statue"/></p> -->
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>About Us</h2>
-          <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
-          <p>Learn more about us here at Plan the Magic and our creator.</p>
-          <p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>
-        </div>
+      <div class="form-group form-row">
+        <!-- Beginning of Input Form -->
+        <form action="attractions.html" method="GET">
+          <div class="form-group form-row">
+            <div class="col">
+              <label for="formControlRange">Example Range input</label>
+              <input type="range" class="form-control-range" id="formControlRange" min="1" max="5" step="1">
+            </div>
+            <div class="col">
+                <label for="inputPark">Park</label>
+                <select id="inputPark" class="col form-control">
+                  <option selected>Select an Attraction</option>
+                  <option>Jungle Cruise</option>
+                  <option>Pirates of the Caribbean</option>
+                  <option>Walt Disney's Enchanted Tiki Room</option>
+                  <option>Big Thunder Mountain Railroad</option>
+                  <option>Country Bear Jamboree</option>
+                  <option>Splash Mountain</option>
+                  <option>Haunted Mansion</option>
+                  <option>Dumbo the Flying Elephant</option>
+                  <option>It's a Small World</option>
+                  <option>Mad Tea Party</option>
+                  <option>Mickey's PhilharMagic</option>
+                  <option>Peter Pan's Flight</option>
+                  <option>Prince Charming Regal Carrousel</option>
+                  <option>Seven Dwarfs Mine Train</option>
+                  <option>The Barnstormer featuring the Great Goofini</option>
+                  <option>The Many Adventures of Winnie the Pooh</option>
+                  <option>Under the Sea: Journey of the Little Mermaid</option>
+                  <option>Astro Orbiter</option>
+                  <option>Buzz Lightyear's Space Ranger Spin</option>
+                  <option>Monsters, Inc. Laugh Floor</option>
+                  <option>Space Mountain</option>
+                  <option>Tomorrowland Speedway</option>
+                  <option>Tomorrowland Transit Authority PeopleMover</option>
+                  <option>Walt Disney's Carousel of Progress</option>
+                  <option disabled>Tron Lightcycle Power Run</option>
+                </div>
+
+
+            <div class="col">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date">
+            </div>
+
+            <div class="col form-row" id="inputTime">
+              <div for="time">Time</div>
+              <input type="time" class="form-control" id="inputtime">
+            </div>
+
+            <div class="col">
+              <label for="inputPark">Park</label>
+              <select id="inputPark" class="col form-control">
+                <option>Select a Park</option>
+                <option selected>Magic Kingdom</option>
+                <option>Epcot</option>
+                <option>Hollywood Studios</option>
+                <option>Animal Kingdom</option>
+            </div> 
+
+            <div class="col">
+              <label for="inputNote">Notes</label>
+              <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+              <!-- input type="text" class="form-control" id="inputNote" placeholder="Notes"
+                    minlength="2" maxlength="25"> -->
+            </div>
+
+            
+            <div class="col">
+                <button type="button" class="btn btn-success">Add</button>
+            </div>
+
+            
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col">
+        <h4>List Name</h4>
+        <div><input type="text" name="listName" value="listName" /></div>
+        <div><button>Add List</button></div>
       </div>
 
-      <hr>
+    <div class="col">
+      <h4>View List</h4>
+    </div>
+
+
+    <section>
+      <select>
+        <option>Select a List</option>
+        <option>Magic Kingdom</option>
+        <option>Epcot</option>
+        <option>Hollywood Studios</option>
+        <option>Animal Kingdom</option>
+      </select>
+    </section>
+
+    <div><button>Delete List</button></div>
+    </div>
+
+    <div class="col">
+      <h4>List Name</h4>
+      <div><input type="text" name="listName" value="listName" /></div>
+      <div><button type="button" class="btn btn-outline-success">Add List</button></div>
+    </div>
+
+
+    </div>
+    </form>
+    </div>
+
+
+    <br />
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Get Started</h2>
+        <!-- <img src="img/sm-PartnersStatue.jpg" alt="Partners Statue" class="prtnr img-thumbnail"> -->
+        <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
+        <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">Start Journey &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Attractions</h2>
+        <img src="img/Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
+        <p>Review the Attractions on offer. </p>
+        <!-- <p><img class="prtnr" src="img/PartnersStatue.jpg" alt="Partners Statue"/></p> -->
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>About Us</h2>
+        <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
+        <p>Learn more about us here at Plan the Magic and our creator.</p>
+        <p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+
+    <hr>
 
     </div> <!-- /container -->
 
     <div class="container">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
-          Launch demo modal
-        </button>
-        <br />
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal3">
+        Edit
+      </button>
+      <br />
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -179,8 +429,8 @@
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 </body>
 
