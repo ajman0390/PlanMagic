@@ -5,7 +5,11 @@
 #newListBtn,
 #deleteListBtn {
     margin-top: .4em;
-    margin-left: .4em;
+    margin-left: .8em;
+}
+
+.canBtnModal {
+    float: left;
 }
 
 form {

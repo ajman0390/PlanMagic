@@ -67,278 +67,877 @@
 
 
     <div class="container col-md-10 offset-md-1 center">
-        <div class="form-group row">
-            <h2>Manage Lists</h2>
-            
-    
-            <div class="col offset-md-7">
-                <h4>View List</h4>
-                <section>
-                    <select>
-                      <option>Select a List</option>
-                      <option>Magic Kingdom</option>
-                      <option>Epcot</option>
-                      <option>Hollywood Studios</option>
-                      <option>Animal Kingdom</option>
-                    </select>
-                  </section>
-                  <div><button type="button" class="btn btn-danger" id="deleteListBtn" >Delete List</button></div>
-            </div>
-            </div>
-          
-      
+      <div class="form-group row">
+        <h2>Manage Lists</h2>
 
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Ranking</th>
-            <th scope="col">Attractions</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time</th>
-            <th scope="col">Park</th>
-            <th scope="col">Notes</th>
-            <th scope="col">FastPass</th>
-            <th colspan="2"><button type="button" class="btn btn-info">Print</button></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Big Thunder Mountain</td>
-            <td>05/29/2020</td>
-            <td>12:45 PM</td>
-            <td>Magic Kingdom</td>
-            <td>Joe's favorite</td>
-            <td>
-              <div class="col">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="container">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
-                  Edit
-                </button>
-                <br />
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
-                  aria-labelledby="exampleModal3Label" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="col offset-md-7">
+          <h4>View List</h4>
+          <section>
+            <select>
+              <option>Select a List</option>
+              <option>Magic Kingdom</option>
+              <option>Epcot</option>
+              <option>Hollywood Studios</option>
+              <option>Animal Kingdom</option>
+            </select>
+          </section>
+          <div><button type="button" class="btn btn-danger" id="deleteListBtn">Delete List</button></div>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Park</th>
+                <th scope="col">Attraction</th>
+                <th scope="col">Time</th>
+                <th scope="col">FastPass+</th>
+                <th scope="col">Ranking</th>
+                <th scope="col">Notes</th>
+              <th colspan="2"><button type="button" class="btn btn-info">Print</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05/29/2020</td>
+              <td>Magic Kingdom</td>
+              <td>Big Thunder Mountain</td>
+              <td>12:45 PM</td>
+              <td>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                    </div>
+                  </div>
+              </td>
+              <td>1</td>
+              <td>Joe's favorite</td>
+              
+              <!-- Start of Edit Modal1 -->
+              <td>
+                <div class="container">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal1">
+                    Edit
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleEditModal1" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModal3Label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModal1Label">Big Thunder Mountain</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive">
+                              <table>
+                              <thead>
+                                  <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Park</th>
+                                    <th scope="col">Attraction</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">FastPass+</th>
+                                    <th scope="col">Ranking</th>
+                                    <th scope="col">Notes</th>
+                                  </tr>
+                                </thead>
+                            <tr>
+                              <td>05/29/2020</td>
+                              <td>Magic Kingdom</td>
+                              <td>Big Thunder Mountain</td>
+                              <td>12:45 PM</td>
+                              <td>
+                                <div class="col">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>1</td>
+                              <td>Joe's favorite</td>
+                            </tr>
+                          </table>
+                          </div>
+                          <hr />
+
+                          <form action="#" method="GET">
+                            <div class="form-group col-md-2 row">
+                              <label for="date">Date</label>
+                              <input type="date" class="form-control" id="inputDate1" value="2020-05-29">
+                            </div>
+                            <div class="row form-group">
+                              <div class="col-md-6">
+                                <label for="inputPark">Park</label>
+                                <select id="inputPark" class="col form-control">
+                                  <option>Select a Park</option>
+                                  <option selected>Magic Kingdom</option>
+                                  <option>Epcot</option>
+                                  <option>Hollywood Studios</option>
+                                  <option>Animal Kingdom</option>
+                                </select>
+                              </div>
+
+                            </div>
+
+                            <div class="row col form-group">
+                              <label for="inputPark">Attraction</label>
+                              <select id="inputPark" class="form-control">
+                                <option>Select an Attraction</option>
+                                <option>Jungle Cruise</option>
+                                <option>Pirates of the Caribbean</option>
+                                <option>Walt Disney's Enchanted Tiki Room</option>
+                                <option selected>Big Thunder Mountain Railroad</option>
+                                <option>Country Bear Jamboree</option>
+                                <option>Splash Mountain</option>
+                                <option>Haunted Mansion</option>
+                                <option>Dumbo the Flying Elephant</option>
+                                <option>It's a Small World</option>
+                                <option>Mad Tea Party</option>
+                                <option>Mickey's PhilharMagic</option>
+                                <option>Peter Pan's Flight</option>
+                                <option>Prince Charming Regal Carrousel</option>
+                                <option>Seven Dwarfs Mine Train</option>
+                                <option>The Barnstormer featuring the Great Goofini</option>
+                                <option>The Many Adventures of Winnie the Pooh</option>
+                                <option>Under the Sea: Journey of the Little Mermaid</option>
+                                <option>Astro Orbiter</option>
+                                <option>Buzz Lightyear's Space Ranger Spin</option>
+                                <option>Monsters, Inc. Laugh Floor</option>
+                                <option>Space Mountain</option>
+                                <option>Tomorrowland Speedway</option>
+                                <option>Tomorrowland Transit Authority PeopleMover</option>
+                                <option>Walt Disney's Carousel of Progress</option>
+                                <option disabled>Tron Lightcycle Power Run</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-2 row" id="inputTime">
+                              <div for="time">Time</div>
+                              <input type="time" class="form-control" id="inputtime">
+                            </div>
+
+                            <!-- Switch for FastPass+ -->
+                            <br />
+                            <div class="offset-md-3">
+                              <div class="custom-control custom-switch">
+                                <div class="form-check">
+                                  <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch" checked>
+                                  <label class="custom-control-label" for="inputFastPassSwitch" data-toggle="tooltip"
+                                    data-html="true"
+                                    title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
+                                    with FastPass+?</label>
+                                </div>
+                              </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6 offset-md-2">
+                                  <label for="formControlRange">Ranking</label>
+                                  <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
+                                    step="1">
+                                </div>
+                              </div>
+
+                            <div class="col-md-8 row offset-md-1">
+                              <label for="inputNote">Notes</label>
+                              <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                            </div>
+                            <br />
+
+                        </div>
+                        <!-- Modal footer Buttons -->
+                        <div class="modal-footer">
+                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </form>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Splash Mountain</td>
-            <td>05/29/2020</td>
-            <td>1:15 PM</td>
-            <td>Magic Kingdom</td>
-            <td>&nbsp;</td>
-            <td>
-              <div class="col">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="container">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
-                  Edit
-                </button>
-                <br />
+              </td> 
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
-                  aria-labelledby="exampleModal3Label" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td>05/29/2020</td>
+              <td>Magic Kingdom</td>
+              <td>Splash Mountain</td>
+              <td>1:15 PM</td>
+              <td>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                    </div>
+                  </div>
+                </td>
+              <td>2</td>
+              <td>&nbsp;</td>
+              
+              <!-- Start of Edit Modal2 -->
+              <td>
+                  <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal2">
+                      Edit
+                    </button>
+  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleEditModal2" tabindex="-1" role="dialog"
+                      aria-labelledby="exampleModal3Label2" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleEditModal2">Splash Mountain</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="table-responsive">
+                                <table>
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Date</th>
+                                      <th scope="col">Park</th>
+                                      <th scope="col">Attraction</th>
+                                      <th scope="col">Time</th>
+                                      <th scope="col">FastPass+</th>
+                                      <th scope="col">Ranking</th>
+                                      <th scope="col">Notes</th>
+                                    </tr>
+                                  </thead>
+                              <tr>
+                                <td>05/29/2020</td>
+                                <td>Magic Kingdom</td>
+                                <td>Splash Mountain</td>
+                                <td>1:15 PM</td>
+                                <td>
+                                  <div class="col">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </table>
+                            </div>
+                            <hr />
+  
+                            <form action="#" method="GET">
+                              <div class="form-group col-md-2 row">
+                                <label for="date">Date</label>
+                                <input type="date" class="form-control" id="inputDate2" value="2020-05-29">
+                              </div>
+                              <div class="row form-group">
+                                <div class="col-md-6">
+                                  <label for="inputPark">Park</label>
+                                  <select id="inputPark" class="col form-control">
+                                    <option>Select a Park</option>
+                                    <option selected>Magic Kingdom</option>
+                                    <option>Epcot</option>
+                                    <option>Hollywood Studios</option>
+                                    <option>Animal Kingdom</option>
+                                  </select>
+                                </div>
+  
+                              </div>
+  
+                              <div class="row col form-group">
+                                <label for="inputPark2">Attraction</label>
+                                <select id="inputPark2" class="form-control">
+                                  <option>Select an Attraction</option>
+                                  <option>Jungle Cruise</option>
+                                  <option>Pirates of the Caribbean</option>
+                                  <option>Walt Disney's Enchanted Tiki Room</option>
+                                  <option>Big Thunder Mountain Railroad</option>
+                                  <option>Country Bear Jamboree</option>
+                                  <option selected>Splash Mountain</option>
+                                  <option>Haunted Mansion</option>
+                                  <option>Dumbo the Flying Elephant</option>
+                                  <option>It's a Small World</option>
+                                  <option>Mad Tea Party</option>
+                                  <option>Mickey's PhilharMagic</option>
+                                  <option>Peter Pan's Flight</option>
+                                  <option>Prince Charming Regal Carrousel</option>
+                                  <option>Seven Dwarfs Mine Train</option>
+                                  <option>The Barnstormer featuring the Great Goofini</option>
+                                  <option>The Many Adventures of Winnie the Pooh</option>
+                                  <option>Under the Sea: Journey of the Little Mermaid</option>
+                                  <option>Astro Orbiter</option>
+                                  <option>Buzz Lightyear's Space Ranger Spin</option>
+                                  <option>Monsters, Inc. Laugh Floor</option>
+                                  <option>Space Mountain</option>
+                                  <option>Tomorrowland Speedway</option>
+                                  <option>Tomorrowland Transit Authority PeopleMover</option>
+                                  <option>Walt Disney's Carousel of Progress</option>
+                                  <option disabled>Tron Lightcycle Power Run</option>
+                                </select>
+                              </div>
+  
+                              <div class="form-group col-md-2 row" id="inputTime2">
+                                <div for="time">Time</div>
+                                <input type="time" class="form-control" id="inputtime2">
+                              </div>
+  
+                              <!-- Switch for FastPass+ -->
+                              <br />
+                              <div class="offset-md-3">
+                                <div class="custom-control custom-switch">
+                                  <div class="form-check">
+                                    <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch2" checked>
+                                    <label class="custom-control-label" for="inputFastPassSwitch2" data-toggle="tooltip"
+                                      data-html="true"
+                                      title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
+                                      with FastPass+?</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div class="row">
+                                  <div class="col-md-6 offset-md-2">
+                                    <label for="formControlRange">Ranking</label>
+                                    <input type="range" class="form-control-range" id="formControlRange2" min="1" max="5"
+                                      step="1">
+                                  </div>
+                                </div>
+  
+                              <div class="col-md-8 row offset-md-1">
+                                <label for="inputNote">Notes</label>
+                                <textarea class="form-control" id="inputNote2" rows="1" placeholder="Notes"></textarea>
+                              </div>
+                              <br />
+  
+                          </div>
+                          <!-- Modal footer Buttons -->
+                          <div class="modal-footer">
+                            <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </form>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Peter Pan's Flight</td>
-            <td>05/29/2020</td>
-            <td>1:45 PM</td>
-            <td>Magic Kingdom</td>
-            <td>Stop for lunch after</td>
-            <td>
-              <div class="col">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="container">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
-                  Edit
-                </button>
-                <br />
+                </td>  
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
-                  aria-labelledby="exampleModal3Label" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td>05/29/2020</td>
+              <td>Magic Kingdom</td>
+              <td>Peter Pan's Flight</td>
+              <td>1:45 PM</td>
+              <td>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                    </div>
+                  </div>
+                </td>
+              <td>3</td>
+              <td>Stop for lunch after</td>
+              
+              <!-- Start of Edit Modal3 -->
+              <td>
+                  <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal3">
+                      Edit
+                    </button>
+  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleEditModal3" tabindex="-1" role="dialog"
+                      aria-labelledby="exampleModal3Label3" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleEditModal3">Splash Mountain</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="table-responsive">
+                                <table>
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Date</th>
+                                      <th scope="col">Park</th>
+                                      <th scope="col">Attraction</th>
+                                      <th scope="col">Time</th>
+                                      <th scope="col">FastPass+</th>
+                                      <th scope="col">Ranking</th>
+                                      <th scope="col">Notes</th>
+                                    </tr>
+                                  </thead>
+                              <tr>
+                                <td>05/29/2020</td>
+                                <td>Magic Kingdom</td>
+                                <td>Peter Pan's Flight</td>
+                                <td>1:45 PM</td>
+                                <td>
+                                  <div class="col">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="fastCheck3" checked disabled>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>3</td>
+                                <td>Stop for lunch after</td>
+                              </tr>
+                            </table>
+                            </div>
+                            <hr />
+  
+                            <form action="#" method="GET">
+                              <div class="form-group col-md-2 row">
+                                <label for="date">Date</label>
+                                <input type="date" class="form-control" id="inputDate" value="2020-05-29">
+                              </div>
+                              <div class="row form-group">
+                                <div class="col-md-6">
+                                  <label for="inputPark">Park</label>
+                                  <select id="inputPark" class="col form-control">
+                                    <option>Select a Park</option>
+                                    <option selected>Magic Kingdom</option>
+                                    <option>Epcot</option>
+                                    <option>Hollywood Studios</option>
+                                    <option>Animal Kingdom</option>
+                                  </select>
+                                </div>
+  
+                              </div>
+  
+                              <div class="row col form-group">
+                                <label for="inputPark">Attraction</label>
+                                <select id="inputPark" class="form-control">
+                                  <option>Select an Attraction</option>
+                                  <option>Jungle Cruise</option>
+                                  <option>Pirates of the Caribbean</option>
+                                  <option>Walt Disney's Enchanted Tiki Room</option>
+                                  <option>Big Thunder Mountain Railroad</option>
+                                  <option>Country Bear Jamboree</option>
+                                  <option>Splash Mountain</option>
+                                  <option>Haunted Mansion</option>
+                                  <option>Dumbo the Flying Elephant</option>
+                                  <option>It's a Small World</option>
+                                  <option>Mad Tea Party</option>
+                                  <option>Mickey's PhilharMagic</option>
+                                  <option selected>Peter Pan's Flight</option>
+                                  <option>Prince Charming Regal Carrousel</option>
+                                  <option>Seven Dwarfs Mine Train</option>
+                                  <option>The Barnstormer featuring the Great Goofini</option>
+                                  <option>The Many Adventures of Winnie the Pooh</option>
+                                  <option>Under the Sea: Journey of the Little Mermaid</option>
+                                  <option>Astro Orbiter</option>
+                                  <option>Buzz Lightyear's Space Ranger Spin</option>
+                                  <option>Monsters, Inc. Laugh Floor</option>
+                                  <option>Space Mountain</option>
+                                  <option>Tomorrowland Speedway</option>
+                                  <option>Tomorrowland Transit Authority PeopleMover</option>
+                                  <option>Walt Disney's Carousel of Progress</option>
+                                  <option disabled>Tron Lightcycle Power Run</option>
+                                </select>
+                              </div>
+  
+                              <div class="form-group col-md-2 row" id="inputTime">
+                                <div for="time">Time</div>
+                                <input type="time" class="form-control" id="inputtime">
+                              </div>
+  
+                              <!-- Switch for FastPass+ -->
+                              <br />
+                              <div class="offset-md-3">
+                                <div class="custom-control custom-switch">
+                                  <div class="form-check">
+                                    <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch3" checked>
+                                    <label class="custom-control-label" for="inputFastPassSwitch3" data-toggle="tooltip"
+                                      data-html="true"
+                                      title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
+                                      with FastPass+?</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div class="row">
+                                  <div class="col-md-6 offset-md-2">
+                                    <label for="formControlRange">Ranking</label>
+                                    <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
+                                      step="1">
+                                  </div>
+                                </div>
+  
+                              <div class="col-md-8 row offset-md-1">
+                                <label for="inputNote">Notes</label>
+                                <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                              </div>
+                              <br />
+  
+                          </div>
+                          <!-- Modal footer Buttons -->
+                          <div class="modal-footer">
+                            <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </form>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Haunted Mansion</td>
-            <td>05/29/2020</td>
-            <td>2:45 PM</td>
-            <td>Magic Kingdom</td>
-            <td>Joe's other favorite</td>
-            <td>
-              <div class="col">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="fastCheck1" disabled>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="container">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
-                  Edit
-                </button>
-                <br />
+                </td>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
-                  aria-labelledby="exampleModal3Label" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td>05/29/2020</td>
+              <td>Magic Kingdom</td>
+              <td>Haunted Mansion</td>
+              <td>2:45 PM</td>
+              <td>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="fastCheck1" disabled>
+                    </div>
+                  </div>
+                </td>
+              <td>4</td>
+              <td>Joe's other favorite</td>
+              
+              <!-- Start of Edit Modal4 -->
+              <td>
+                  <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal4">
+                      Edit
+                    </button>
+  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleEditModal4" tabindex="-1" role="dialog"
+                      aria-labelledby="exampleModal3Label4" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleEditModal4">Haunted Mansion</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="table-responsive">
+                                <table>
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Date</th>
+                                      <th scope="col">Park</th>
+                                      <th scope="col">Attraction</th>
+                                      <th scope="col">Time</th>
+                                      <th scope="col">FastPass+</th>
+                                      <th scope="col">Ranking</th>
+                                      <th scope="col">Notes</th>
+                                    </tr>
+                                  </thead>
+                              <tr>
+                                <td>05/29/2020</td>
+                                <td>Magic Kingdom</td>
+                                <td>Haunted Mansion</td>
+                                <td>2:45 PM</td>
+                                <td>
+                                  <div class="col">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="fastCheck4" disabled>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>4</td>
+                                <td>Joe's other favorite</td>
+                              </tr>
+                            </table>
+                            </div>
+                            <hr />
+  
+                            <form action="#" method="GET">
+                              <div class="form-group col-md-2 row">
+                                <label for="date">Date</label>
+                                <input type="date" class="form-control" id="inputDate" value="2020-05-29">
+                              </div>
+                              <div class="row form-group">
+                                <div class="col-md-6">
+                                  <label for="inputPark">Park</label>
+                                  <select id="inputPark" class="col form-control">
+                                    <option>Select a Park</option>
+                                    <option selected>Magic Kingdom</option>
+                                    <option>Epcot</option>
+                                    <option>Hollywood Studios</option>
+                                    <option>Animal Kingdom</option>
+                                  </select>
+                                </div>
+  
+                              </div>
+  
+                              <div class="row col form-group">
+                                <label for="inputPark">Attraction</label>
+                                <select id="inputPark" class="form-control">
+                                  <option>Select an Attraction</option>
+                                  <option>Jungle Cruise</option>
+                                  <option>Pirates of the Caribbean</option>
+                                  <option>Walt Disney's Enchanted Tiki Room</option>
+                                  <option>Big Thunder Mountain Railroad</option>
+                                  <option>Country Bear Jamboree</option>
+                                  <option>Splash Mountain</option>
+                                  <option selected>Haunted Mansion</option>
+                                  <option>Dumbo the Flying Elephant</option>
+                                  <option>It's a Small World</option>
+                                  <option>Mad Tea Party</option>
+                                  <option>Mickey's PhilharMagic</option>
+                                  <option>Peter Pan's Flight</option>
+                                  <option>Prince Charming Regal Carrousel</option>
+                                  <option>Seven Dwarfs Mine Train</option>
+                                  <option>The Barnstormer featuring the Great Goofini</option>
+                                  <option>The Many Adventures of Winnie the Pooh</option>
+                                  <option>Under the Sea: Journey of the Little Mermaid</option>
+                                  <option>Astro Orbiter</option>
+                                  <option>Buzz Lightyear's Space Ranger Spin</option>
+                                  <option>Monsters, Inc. Laugh Floor</option>
+                                  <option>Space Mountain</option>
+                                  <option>Tomorrowland Speedway</option>
+                                  <option>Tomorrowland Transit Authority PeopleMover</option>
+                                  <option>Walt Disney's Carousel of Progress</option>
+                                  <option disabled>Tron Lightcycle Power Run</option>
+                                </select>
+                              </div>
+  
+                              <div class="form-group col-md-2 row" id="inputTime">
+                                <div for="time">Time</div>
+                                <input type="time" class="form-control" id="inputtime">
+                              </div>
+  
+                              <!-- Switch for FastPass+ -->
+                              <br />
+                              <div class="offset-md-3">
+                                <div class="custom-control custom-switch">
+                                  <div class="form-check">
+                                    <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch4" checked>
+                                    <label class="custom-control-label" for="inputFastPassSwitch4" data-toggle="tooltip"
+                                      data-html="true"
+                                      title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
+                                      with FastPass+?</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div class="row">
+                                  <div class="col-md-6 offset-md-2">
+                                    <label for="formControlRange">Ranking</label>
+                                    <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
+                                      step="1">
+                                  </div>
+                                </div>
+  
+                              <div class="col-md-8 row offset-md-1">
+                                <label for="inputNote">Notes</label>
+                                <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                              </div>
+                              <br />
+  
+                          </div>
+                          <!-- Modal footer Buttons -->
+                          <div class="modal-footer">
+                            <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </form>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Pirates of the Caribbean</td>
-            <td>05/29/2020</td>
-            <td>3:45 PM</td>
-            <td>Magic Kingdom</td>
-            <td>Molly's must ride</td>
-            <td>
-              <div class="col">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="fastCheck1" disabled>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="container">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal3">
-                  Edit
-                </button>
-                <br />
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
-                  aria-labelledby="exampleModal3Label" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                </td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td>05/29/2020</td>
+              <td>Magic Kingdom</td>
+              <td>Pirates of the Caribbean</td>
+              <td>3:45 PM</td>
+              <td>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="fastCheck1" disabled>
+                    </div>
+                  </div>
+                </td>
+              <td>5</td>
+              <td>Molly's must ride</td>
+              
+              <!-- Start of Edit Modal5 -->
+              <td>
+                  <div class="container">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal5">
+                      Edit
+                    </button>
+  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleEditModal5" tabindex="-1" role="dialog"
+                      aria-labelledby="exampleModal3Label5" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleEditModal5">Pirates of the Caribbean</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="table-responsive">
+                                <table>
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Date</th>
+                                      <th scope="col">Park</th>
+                                      <th scope="col">Attraction</th>
+                                      <th scope="col">Time</th>
+                                      <th scope="col">FastPass+</th>
+                                      <th scope="col">Ranking</th>
+                                      <th scope="col">Notes</th>
+                                    </tr>
+                                  </thead>
+                              <tr>
+                                <td>05/29/2020</td>
+                                <td>Magic Kingdom</td>
+                                <td>Pirates of the Caribbean</td>
+                                <td>3:45 PM</td>
+                                <td>
+                                  <div class="col">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="fastCheck5" disabled>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>5</td>
+                                <td>Molly's must ride</td>
+                              </tr>
+                            </table>
+                            </div>
+                            <hr />
+  
+                            <form action="#" method="GET">
+                              <div class="form-group col-md-2 row">
+                                <label for="date">Date</label>
+                                <input type="date" class="form-control" id="inputDate" value="2020-05-29">
+                              </div>
+                              <div class="row form-group">
+                                <div class="col-md-6">
+                                  <label for="inputPark">Park</label>
+                                  <select id="inputPark" class="col form-control">
+                                    <option>Select a Park</option>
+                                    <option selected>Magic Kingdom</option>
+                                    <option>Epcot</option>
+                                    <option>Hollywood Studios</option>
+                                    <option>Animal Kingdom</option>
+                                  </select>
+                                </div>
+  
+                              </div>
+  
+                              <div class="row col form-group">
+                                <label for="inputPark">Attraction</label>
+                                <select id="inputPark" class="form-control">
+                                  <option>Select an Attraction</option>
+                                  <option>Jungle Cruise</option>
+                                  <option selected>Pirates of the Caribbean</option>
+                                  <option>Walt Disney's Enchanted Tiki Room</option>
+                                  <option>Big Thunder Mountain Railroad</option>
+                                  <option>Country Bear Jamboree</option>
+                                  <option>Splash Mountain</option>
+                                  <option>Haunted Mansion</option>
+                                  <option>Dumbo the Flying Elephant</option>
+                                  <option>It's a Small World</option>
+                                  <option>Mad Tea Party</option>
+                                  <option>Mickey's PhilharMagic</option>
+                                  <option>Peter Pan's Flight</option>
+                                  <option>Prince Charming Regal Carrousel</option>
+                                  <option>Seven Dwarfs Mine Train</option>
+                                  <option>The Barnstormer featuring the Great Goofini</option>
+                                  <option>The Many Adventures of Winnie the Pooh</option>
+                                  <option>Under the Sea: Journey of the Little Mermaid</option>
+                                  <option>Astro Orbiter</option>
+                                  <option>Buzz Lightyear's Space Ranger Spin</option>
+                                  <option>Monsters, Inc. Laugh Floor</option>
+                                  <option>Space Mountain</option>
+                                  <option>Tomorrowland Speedway</option>
+                                  <option>Tomorrowland Transit Authority PeopleMover</option>
+                                  <option>Walt Disney's Carousel of Progress</option>
+                                  <option disabled>Tron Lightcycle Power Run</option>
+                                </select>
+                              </div>
+  
+                              <div class="form-group col-md-2 row" id="inputTime">
+                                <div for="time">Time</div>
+                                <input type="time" class="form-control" id="inputtime">
+                              </div>
+  
+                              <!-- Switch for FastPass+ -->
+                              <br />
+                              <div class="offset-md-3">
+                                <div class="custom-control custom-switch">
+                                  <div class="form-check">
+                                    <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch5" checked>
+                                    <label class="custom-control-label" for="inputFastPassSwitch5" data-toggle="tooltip"
+                                      data-html="true"
+                                      title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
+                                      with FastPass+?</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div class="row">
+                                  <div class="col-md-6 offset-md-2">
+                                    <label for="formControlRange">Ranking</label>
+                                    <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
+                                      step="1">
+                                  </div>
+                                </div>
+  
+                              <div class="col-md-8 row offset-md-1">
+                                <label for="inputNote">Notes</label>
+                                <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                              </div>
+                              <br />
+  
+                          </div>
+                          <!-- Modal footer Buttons -->
+                          <div class="modal-footer">
+                            <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </form>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
-          </tr>
-        </tbody>
-      </table>
+                </td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <hr />
     </div>
 
@@ -352,7 +951,7 @@
       </div>
 
 
-      <!-- Beginning of Registration Form -->
+      <!-- Beginning of Attractions Form -->
       <form action="#" method="GET">
         <div class="form-group row offset-md-3 center">
           <div class="col-md-4">
@@ -375,7 +974,7 @@
             <label for="formControlRange">Ranking</label>
             <input type="range" class="form-control-range" id="formControlRange" min="1" max="5" step="1">
           </div>
-          <div class="form-group col-md-3">
+          <div class="form-group col-md-5">
             <label for="inputPark">Attraction</label>
             <select id="inputPark" class="form-control">
               <option selected>Select an Attraction</option>
@@ -411,44 +1010,40 @@
             <input type="time" class="form-control" id="inputtime">
           </div>
         </div>
-        <!-- Switch for email updates about features of site -->
+        <!-- Switch for FastPass+ -->
         <div class="offset-md-3">
-          <div class="custom-control custom-switch">
             <div class="form-check">
-              <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch" checked>
-              <label class="custom-control-label" for="inputFastPassSwitch" data-toggle="tooltip" data-html="true"
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                    <label class="custom-control-label" for="customSwitch1" data-toggle="tooltip" data-html="true"
                 title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
-                with FastPass?</label>
+                with FastPass+?</label>
+                  </div>
             </div>
           </div>
-        </div>
+        
 
-        <div class="col-md-8 row offset-md-1">
+        <div class="col-md-8 row offset-md-2">
           <label for="inputNote">Notes</label>
-          <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+          <textarea class="form-control" id="inputNote" rows="2" placeholder="Notes"></textarea>
         </div>
         <br />
 
-        
-
-
-        <!-- Buttons for registration -->
+        <!-- Buttons for list -->
         <br />
         <div class="form-group row">
           <div class="col-sm-10">
             <a class="btn btn-outline-primary" href="login.html" id="regbtn" role="button">Log In</a>
-            <a class="btn btn-outline-danger" href="template.html" id="canbtn" role="button">Cancel</a>
-            <button type="submit" class="btn btn-outline-success">Register</button>
+            <button type="reset" class="btn btn-outline-danger" id="canbtn">Cancel</button>
+            <button type="submit" class="btn btn-outline-success">Add</button>
           </div>
         </div>
 
         <div class="form-group">
-            <h4>New List Name</h4>
-            <div><input type="text" name="listName" placeholder="New List Name" /></div>
-            <button type="button" class="btn btn-success" id="newListBtn">Create New List</button>
-          </div>
-
-
+          <h4>New List Name</h4>
+          <div><input type="text" name="listName" placeholder="New List Name" /></div>
+          <button type="button" class="btn btn-success" id="newListBtn">Create New List</button>
+        </div>
 
       </form>
 
@@ -523,16 +1118,20 @@
       </div>-->
     </div>
 
-
-
   </main>
 
   <footer class="container">
-    <p>&copy; Plan the Magic 2019 <a href="https://disneyworld.disney.go.com/">Credit to Disney</a></p>
+    <p>&copy; Plan the Magic 2019 <a href="https://disneyworld.disney.go.com/" target="new">Credit to Disney</a></p>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script src="js/attractions.js"></script>
 </body>
 
