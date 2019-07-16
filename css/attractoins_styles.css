@@ -1,6 +1,15 @@
-#inputTime {
-    padding-top: .5em;
-    height: .6em;
+#addBtn {
+    float: right;
+}
+
+#newListBtn,
+#deleteListBtn {
+    margin-top: .4em;
+    margin-left: .4em;
+}
+
+form {
+    /* background-color: rgba(68, 146, 190, 0.637); */
 }
 
 input.form-control {
