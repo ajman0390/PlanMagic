@@ -33,6 +33,9 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="started.html">Get Started</a>
+            </li>
 
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
@@ -52,7 +55,8 @@
         <h1 class="display-3 toph1">Plan the Magic!</h1>
         <p><img class="img-fluid bgTopImg" src="img/wdw-all.jpeg" alt="Walt Disney World"></p>
         <p>Create lists to assist in planning the most for your Walt Disney World Vacation.</p>
-        <p id="logOutBtn" class="offset-md-5"><a class="btn btn-outline-primary btn-lg" href="index.html" role="button">Log Out
+        <p id="logOutBtn" class="offset-md-5"><a class="btn btn-outline-primary btn-lg" href="index.html"
+            role="button">Log Out
             &raquo;</a></p>
       </div>
     </div>
@@ -126,8 +130,8 @@
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="editModal1" tabindex="-1" role="dialog"
-                    aria-labelledby="editModal1" aria-hidden="true">
+                  <div class="modal fade" id="editModal1" tabindex="-1" role="dialog" aria-labelledby="editModal1"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -299,8 +303,8 @@
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="editModal2" tabindex="-1" role="dialog"
-                    aria-labelledby="editModal2" aria-hidden="true">
+                  <div class="modal fade" id="editModal2" tabindex="-1" role="dialog" aria-labelledby="editModal2"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -470,8 +474,8 @@
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="editModal3" tabindex="-1" role="dialog"
-                    aria-labelledby="editModal3" aria-hidden="true">
+                  <div class="modal fade" id="editModal3" tabindex="-1" role="dialog" aria-labelledby="editModal3"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -644,8 +648,8 @@
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="editModal4" tabindex="-1" role="dialog"
-                    aria-labelledby="editModal4" aria-hidden="true">
+                  <div class="modal fade" id="editModal4" tabindex="-1" role="dialog" aria-labelledby="editModal4"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -668,22 +672,22 @@
                                   <th scope="col">Notes</th>
                                 </tr>
                               </thead>
-                                <tr>
-                                  <td>05/29/2020</td>
-                                  <td>Magic Kingdom</td>
-                                  <td>Haunted Mansion</td>
-                                  <td>2:45 PM</td>
-                                  <td>
-                                    <div class="col">
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="fastCheckModal4" checked
-                                          disabled>
-                                      </div>
+                              <tr>
+                                <td>05/29/2020</td>
+                                <td>Magic Kingdom</td>
+                                <td>Haunted Mansion</td>
+                                <td>2:45 PM</td>
+                                <td>
+                                  <div class="col">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="fastCheckModal4" checked
+                                        disabled>
                                     </div>
-                                  </td>
-                                  <td>4</td>
-                                  <td>Joe's other favorite</td>
-                                </tr>
+                                  </div>
+                                </td>
+                                <td>4</td>
+                                <td>Joe's other favorite</td>
+                              </tr>
                             </table>
                           </div>
 
@@ -823,8 +827,8 @@
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="editModal5" tabindex="-1" role="dialog"
-                    aria-labelledby="editModal5" aria-hidden="true">
+                  <div class="modal fade" id="editModal5" tabindex="-1" role="dialog" aria-labelledby="editModal5"
+                    aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -977,15 +981,17 @@
 
     <!-- Start of Form Container -->
     <article class="col-md-10 offset-md-1 center">
-      <div class="form-group row">
-        <h2>Add to List</h2>
-        <div class="col">
-          <button type="button" class="btn btn-success" id="addBtn">Add</button>
-        </div>
-      </div>
 
       <!-- Beginning of Attractions Form -->
       <form action="#" method="GET">
+        <div class="form-group row">
+          <h2>Add to List</h2>
+          <div class="col">
+            <button type="submit" class="btn btn-outline-success" id="addBtn">Add</button>
+            <!-- <button type="submit" class="btn btn-outline-success">Add</button> -->
+          </div>
+        </div>
+
         <div class="form-group row offset-md-3 center">
           <div class="col-md-4">
             <label for="inputParkForm1">Park</label>
@@ -999,7 +1005,7 @@
           </div>
           <div class="form-group col-md-2 row">
             <label for="inputDate-Form">Date</label>
-            <input type="date" class="form-control" id="inputDate-Form">
+            <input type="date" class="form-control" id="inputDate-Form" required>
           </div>
         </div>
         <div class="form-group row offset-md-2 ">
@@ -1040,7 +1046,7 @@
           </div>
           <div class="form-group col-md-2 center row">
             <div>Time</div>
-            <input type="time" class="form-control">
+            <input type="time" class="form-control" required>
           </div>
         </div>
         <!-- Switch for FastPass+ -->
@@ -1070,7 +1076,7 @@
             <button type="reset" class="btn btn-outline-danger" id="canbtn">Cancel</button>
             <button type="submit" class="btn btn-outline-success">Add</button>
           </div>
-        </div>      
+        </div>
 
       </form>
       <!-- End of Attractions Form -->
@@ -1080,43 +1086,44 @@
     </article> <!-- End of Form Container -->
 
     <!-- New List Form -->
-    <form action="#" method="GET"> 
+    <form action="#" method="GET">
       <div class="container">
         <h4>Create New List</h4>
         <div class="row offset-md-3 col-md-6">
-            <!-- <label for="newListInput">Create New List</label> -->
-            <input type="text" class="form-control" id="newListInput" placeholder="New List Name" minlength="2" maxlength="40">
-            <button type="submit" class="btn btn-success" id="newListBtn">Create New List</button>
+          <!-- <label for="newListInput">Create New List</label> -->
+          <input type="text" class="form-control" id="newListInput" placeholder="New List Name" minlength="2"
+            maxlength="40">
+          <button type="submit" class="btn btn-success" id="newListBtn">Create New List</button>
         </div>
         <hr />
       </div>
-    </form> 
+    </form>
 
     <!-- Bottom row of columns -->
     <aside class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Get Started</h2>
-            <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
-            <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
-            <p><a class="btn btn-secondary" href="login.html" role="button">Start Journey &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Attractions</h2>
-            <img src="img/exlg-Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
-            <p>Review the Attractions Planner to assist in planning your trip to Walt Disney World. </p>
-            <p><a class="btn btn-secondary" href="attractions.html" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>About Us</h2>
-            <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
-            <p>Learn more about us here at Plan the Magic and our creator.</p>
-            <p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>
-          </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Get Started</h2>
+          <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
+          <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
+          <p><a class="btn btn-secondary" href="login.html" role="button">Start Journey &raquo;</a></p>
         </div>
-  
-        <hr>
-        
+        <div class="col-md-4">
+          <h2>Attractions</h2>
+          <img src="img/exlg-Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
+          <p>Review the Attractions Planner to assist in planning your trip to Walt Disney World. </p>
+          <p><a class="btn btn-secondary" href="attractions.html" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>About Us</h2>
+          <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
+          <p>Learn more about us here at Plan the Magic and our creator.</p>
+          <p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
     </aside> <!-- /container -->
 
     <hr>
