@@ -1,0 +1,67 @@
+#addBtn {
+    float: right;
+}
+
+#logInBtn {
+    float: right;
+  }
+
+
+#deleteListBtn {
+    margin-top: .4em;
+    margin-left: .8em;
+}
+
+#newListBtn {
+    margin-left: .8em;
+}
+
+#listDelBtn,
+#listPrntBtn {
+    font-size: .9em;
+    white-space: nowrap;
+}
+
+#newListInput {
+    width: 50%;
+}
+
+#listPrntBtn {
+    margin-left: .7em;
+}
+
+#attractLists,
+#viewLists {
+    padding-left: .2em;
+}
+
+.canBtnModal {
+    float: left;
+}
+
+form {
+    /* background-color: rgba(68, 146, 190, 0.637); */
+}
+
+input.form-control {
+    width: auto;
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
