@@ -8,6 +8,16 @@
     margin-left: .8em;
 }
 
+#listDelBtn,
+#listPrntBtn {
+    font-size: .95em;
+}
+
+#attractLists,
+#viewLists {
+    padding-left: .2em;
+}
+
 .canBtnModal {
     float: left;
 }
