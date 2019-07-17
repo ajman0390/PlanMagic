@@ -57,7 +57,7 @@
       <div class="container col-md-6">
         <h1 class="display-3 toph1">Plan the Magic!</h1>
         <p><img class="img-fluid bgTopImg" src="img/wdw-all.jpeg" alt="Walt Disney World"></p>
-        <p>This is a site to assist in planning your Walt Disney World Vacation.</p>
+        <p>Create lists to assist in planning the most for your Walt Disney World Vacation.</p>
         <p id="firstBtn" class="offset-md-5"><a class="btn btn-primary btn-lg" href="login.html" role="button">Login
             &raquo;</a></p>
       </div>
@@ -67,22 +67,25 @@
   <main>
 
     <!-- Start of Table Container -->
-    <div class="container col-md-10 offset-md-1 center">
+    <section class="container col-md-10 offset-md-1 center">
       <div class="form-group row">
         <h2>Attraction Lists</h2>
         <div class="col offset-md-6">
-          <div class="offset-md-4"><h4>View List</h4></div>
+          <div class="offset-md-4">
+            <h4>View List</h4>
+          </div>
           <div class="form-group col">
-            
             <select id="inputParkList" class="form-control">
-              <option selected>Select a List</option>
-              <option>Magic Kingdom</option>
-              <option>Epcot</option>
-              <option>Hollywood Studios</option>
-              <option>Animal Kingdom</option>
+              <option>Select a List</option>
+              <option selected>Day 1 - Magic Kingdom</option>
+              <option>Day 3 - Epcot</option>
+              <option>Day 2 - Hollywood Studios</option>
+              <option>Day 4 - Animal Kingdom</option>
+              <option>Day 5 - Magic Kingdom</option>
             </select>
           </div>
-          <div class="offset-md-4"><button type="button" class="btn btn-outline-success" id="deleteListBtn">View List</button></div>
+          <div class="offset-md-4"><button type="button" class="btn btn-outline-success" id="viewListBtn">View
+              List</button></div>
         </div>
       </div>
 
@@ -113,7 +116,7 @@
               <td>
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                    <input class="form-check-input" type="checkbox" id="fastCheckRow1" checked disabled>
                   </div>
                 </div>
               </td>
@@ -124,17 +127,17 @@
               <td>
                 <div class="container">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal1">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal1">
                     Edit
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleEditModal1" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModal3Label" aria-hidden="true">
+                  <div class="modal fade" id="editModal1" tabindex="-1" role="dialog"
+                    aria-labelledby="editModal1" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModal1Label">Big Thunder Mountain</h5>
+                          <h5 class="modal-title" id="editModal1-title">Big Thunder Mountain</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                           </button>
@@ -161,7 +164,8 @@
                                 <td>
                                   <div class="col">
                                     <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                                      <input class="form-check-input" type="checkbox" id="fastCheckModal1" checked
+                                        disabled>
                                     </div>
                                   </div>
                                 </td>
@@ -172,15 +176,16 @@
                           </div>
                           <hr />
 
+                          <!-- Modal form -->
                           <form action="#" method="GET">
                             <div class="form-group col-md-2 row">
-                              <label for="date">Date</label>
-                              <input type="date" class="form-control" id="inputDate1" value="2020-05-29">
+                              <label for="inputDate-Modal1">Date</label>
+                              <input type="date" class="form-control" id="inputDate-Modal1" value="2020-05-29">
                             </div>
                             <div class="row form-group">
                               <div class="col-md-6">
-                                <label for="inputPark">Park</label>
-                                <select id="inputPark" class="col form-control">
+                                <label for="inputParkModal1">Park</label>
+                                <select id="inputParkModal1" class="col form-control">
                                   <option>Select a Park</option>
                                   <option selected>Magic Kingdom</option>
                                   <option>Epcot</option>
@@ -192,8 +197,8 @@
                             </div>
 
                             <div class="row col form-group">
-                              <label for="inputPark">Attraction</label>
-                              <select id="inputPark" class="form-control">
+                              <label for="inputAttractionModal1">Attraction</label>
+                              <select id="inputAttractionModal1" class="form-control">
                                 <option>Select an Attraction</option>
                                 <option>Jungle Cruise</option>
                                 <option>Pirates of the Caribbean</option>
@@ -223,9 +228,9 @@
                               </select>
                             </div>
 
-                            <div class="form-group col-md-2 row" id="inputTime">
-                              <div for="time">Time</div>
-                              <input type="time" class="form-control" id="inputtime">
+                            <div class="form-group col-md-2 row">
+                              <div>Time</div>
+                              <input type="time" class="form-control" value="12:45">
                             </div>
 
                             <!-- Switch for FastPass+ -->
@@ -244,26 +249,28 @@
                             <br />
                             <div class="row">
                               <div class="col-md-6 offset-md-2">
-                                <label for="formControlRange">Ranking</label>
-                                <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
-                                  step="1">
+                                <label for="controlRange-Modal1">Ranking</label>
+                                <input type="range" class="form-control-range" id="controlRange-Modal1" min="1" max="5"
+                                  step="1" value="1">
                               </div>
                             </div>
 
                             <div class="col-md-8 row offset-md-1">
-                              <label for="inputNote">Notes</label>
-                              <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                              <label for="inputNote-Modal1">Notes</label>
+                              <textarea class="form-control" id="inputNote-Modal1" rows="1"
+                                placeholder="Notes"></textarea>
                             </div>
                             <br />
 
+
+                            <!-- Modal footer Buttons -->
+                            <div class="modal-footer">
+                              <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </form>
                         </div>
-                        <!-- Modal footer Buttons -->
-                        <div class="modal-footer">
-                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-                        </form>
                       </div>
                     </div>
                   </div>
@@ -282,7 +289,7 @@
               <td>
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                    <input class="form-check-input" type="checkbox" id="fastCheckRow2" disabled>
                   </div>
                 </div>
               </td>
@@ -293,17 +300,17 @@
               <td>
                 <div class="container">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal2">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal2">
                     Edit
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleEditModal2" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModal3Label2" aria-hidden="true">
+                  <div class="modal fade" id="editModal2" tabindex="-1" role="dialog"
+                    aria-labelledby="editModal2" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleEditModal2">Splash Mountain</h5>
+                          <h5 class="modal-title" id="editModal2-title">Splash Mountain</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                           </button>
@@ -330,7 +337,7 @@
                                 <td>
                                   <div class="col">
                                     <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                                      <input class="form-check-input" type="checkbox" id="fastCheckModal2" disabled>
                                     </div>
                                   </div>
                                 </td>
@@ -343,13 +350,13 @@
 
                           <form action="#" method="GET">
                             <div class="form-group col-md-2 row">
-                              <label for="date">Date</label>
-                              <input type="date" class="form-control" id="inputDate2" value="2020-05-29">
+                              <label for="inputDate-Modal2">Date</label>
+                              <input type="date" class="form-control" id="inputDate-Modal2" value="2020-05-29">
                             </div>
                             <div class="row form-group">
                               <div class="col-md-6">
-                                <label for="inputPark">Park</label>
-                                <select id="inputPark" class="col form-control">
+                                <label for="inputParkModal2">Park</label>
+                                <select id="inputParkModal2" class="col form-control">
                                   <option>Select a Park</option>
                                   <option selected>Magic Kingdom</option>
                                   <option>Epcot</option>
@@ -361,8 +368,8 @@
                             </div>
 
                             <div class="row col form-group">
-                              <label for="inputPark2">Attraction</label>
-                              <select id="inputPark2" class="form-control">
+                              <label for="inputAttractoinModal2">Attraction</label>
+                              <select id="inputAttractoinModal2" class="form-control">
                                 <option>Select an Attraction</option>
                                 <option>Jungle Cruise</option>
                                 <option>Pirates of the Caribbean</option>
@@ -392,9 +399,9 @@
                               </select>
                             </div>
 
-                            <div class="form-group col-md-2 row" id="inputTime2">
-                              <div for="time">Time</div>
-                              <input type="time" class="form-control" id="inputtime2">
+                            <div class="form-group col-md-2 row">
+                              <div>Time</div>
+                              <input type="time" class="form-control" value="13:15">
                             </div>
 
                             <!-- Switch for FastPass+ -->
@@ -402,7 +409,7 @@
                             <div class="offset-md-3">
                               <div class="custom-control custom-switch">
                                 <div class="form-check">
-                                  <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch2" checked>
+                                  <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch2">
                                   <label class="custom-control-label" for="inputFastPassSwitch2" data-toggle="tooltip"
                                     data-html="true"
                                     title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
@@ -413,26 +420,27 @@
                             <br />
                             <div class="row">
                               <div class="col-md-6 offset-md-2">
-                                <label for="formControlRange">Ranking</label>
-                                <input type="range" class="form-control-range" id="formControlRange2" min="1" max="5"
-                                  step="1">
+                                <label for="controlRange-Modal2">Ranking</label>
+                                <input type="range" class="form-control-range" id="controlRange-Modal2" min="1" max="5"
+                                  step="1" value="2">
                               </div>
                             </div>
 
                             <div class="col-md-8 row offset-md-1">
-                              <label for="inputNote">Notes</label>
-                              <textarea class="form-control" id="inputNote2" rows="1" placeholder="Notes"></textarea>
+                              <label for="inputNote-Modal2">Notes</label>
+                              <textarea class="form-control" id="inputNote-Modal2" rows="1"
+                                placeholder="Notes"></textarea>
                             </div>
                             <br />
 
+                            <!-- Modal footer Buttons -->
+                            <div class="modal-footer">
+                              <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </form>
                         </div>
-                        <!-- Modal footer Buttons -->
-                        <div class="modal-footer">
-                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-                        </form>
                       </div>
                     </div>
                   </div>
@@ -452,7 +460,7 @@
               <td>
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="fastCheck1" checked disabled>
+                    <input class="form-check-input" type="checkbox" id="fastCheckRow3" checked disabled>
                   </div>
                 </div>
               </td>
@@ -463,17 +471,17 @@
               <td>
                 <div class="container">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal3">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal3">
                     Edit
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleEditModal3" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModal3Label3" aria-hidden="true">
+                  <div class="modal fade" id="editModal3" tabindex="-1" role="dialog"
+                    aria-labelledby="editModal3" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleEditModal3">Splash Mountain</h5>
+                          <h5 class="modal-title" id="editModal3-title">Splash Mountain</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                           </button>
@@ -500,7 +508,8 @@
                                 <td>
                                   <div class="col">
                                     <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" id="fastCheck3" checked disabled>
+                                      <input class="form-check-input" type="checkbox" id="fastCheckModal3" checked
+                                        disabled>
                                     </div>
                                   </div>
                                 </td>
@@ -513,13 +522,13 @@
 
                           <form action="#" method="GET">
                             <div class="form-group col-md-2 row">
-                              <label for="date">Date</label>
-                              <input type="date" class="form-control" id="inputDate" value="2020-05-29">
+                              <label for="inputDate-Modal3">Date</label>
+                              <input type="date" class="form-control" id="inputDate-Modal3" value="2020-05-29">
                             </div>
                             <div class="row form-group">
                               <div class="col-md-6">
-                                <label for="inputPark">Park</label>
-                                <select id="inputPark" class="col form-control">
+                                <label for="inputParkModal3">Park</label>
+                                <select id="inputParkModal3" class="col form-control">
                                   <option>Select a Park</option>
                                   <option selected>Magic Kingdom</option>
                                   <option>Epcot</option>
@@ -531,8 +540,8 @@
                             </div>
 
                             <div class="row col form-group">
-                              <label for="inputPark">Attraction</label>
-                              <select id="inputPark" class="form-control">
+                              <label for="inputAttractionModal3">Attraction</label>
+                              <select id="inputAttractionModal3" class="form-control">
                                 <option>Select an Attraction</option>
                                 <option>Jungle Cruise</option>
                                 <option>Pirates of the Caribbean</option>
@@ -562,9 +571,9 @@
                               </select>
                             </div>
 
-                            <div class="form-group col-md-2 row" id="inputTime">
-                              <div for="time">Time</div>
-                              <input type="time" class="form-control" id="inputtime">
+                            <div class="form-group col-md-2 row">
+                              <div>Time</div>
+                              <input type="time" class="form-control" value="13:45">
                             </div>
 
                             <!-- Switch for FastPass+ -->
@@ -583,31 +592,35 @@
                             <br />
                             <div class="row">
                               <div class="col-md-6 offset-md-2">
-                                <label for="formControlRange">Ranking</label>
-                                <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
-                                  step="1">
+                                <label for="controlRange-Modal3">Ranking</label>
+                                <input type="range" class="form-control-range" id="controlRange-Modal3" min="1" max="5"
+                                  step="1" value="3">
                               </div>
                             </div>
 
                             <div class="col-md-8 row offset-md-1">
-                              <label for="inputNote">Notes</label>
-                              <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                              <label for="inputNote-Modal3">Notes</label>
+                              <textarea class="form-control" id="inputNote-Modal3" rows="1"
+                                placeholder="Notes"></textarea>
                             </div>
                             <br />
 
+
+                            <!-- Modal footer Buttons -->
+                            <div class="modal-footer">
+                              <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </form>
                         </div>
-                        <!-- Modal footer Buttons -->
-                        <div class="modal-footer">
-                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-                        </form>
                       </div>
                     </div>
                   </div>
                 </div>
               </td>
+
+
 
               <td><button type="button" class="btn btn-danger">Delete</button></td>
             </tr>
@@ -621,7 +634,7 @@
               <td>
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="fastCheck1" disabled>
+                    <input class="form-check-input" type="checkbox" id="fastCheckRow4" checked disabled>
                   </div>
                 </div>
               </td>
@@ -632,17 +645,17 @@
               <td>
                 <div class="container">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal4">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal4">
                     Edit
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleEditModal4" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModal3Label4" aria-hidden="true">
+                  <div class="modal fade" id="editModal4" tabindex="-1" role="dialog"
+                    aria-labelledby="editModal4" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleEditModal4">Haunted Mansion</h5>
+                          <h5 class="modal-title" id="editModal4-title">Haunted Mansion</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                           </button>
@@ -661,34 +674,36 @@
                                   <th scope="col">Notes</th>
                                 </tr>
                               </thead>
-                              <tr>
-                                <td>05/29/2020</td>
-                                <td>Magic Kingdom</td>
-                                <td>Haunted Mansion</td>
-                                <td>2:45 PM</td>
-                                <td>
-                                  <div class="col">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" id="fastCheck4" disabled>
+                                <tr>
+                                  <td>05/29/2020</td>
+                                  <td>Magic Kingdom</td>
+                                  <td>Haunted Mansion</td>
+                                  <td>2:45 PM</td>
+                                  <td>
+                                    <div class="col">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="fastCheckModal4" checked
+                                          disabled>
+                                      </div>
                                     </div>
-                                  </div>
-                                </td>
-                                <td>4</td>
-                                <td>Joe's other favorite</td>
-                              </tr>
+                                  </td>
+                                  <td>4</td>
+                                  <td>Joe's other favorite</td>
+                                </tr>
                             </table>
                           </div>
+
                           <hr />
 
                           <form action="#" method="GET">
                             <div class="form-group col-md-2 row">
-                              <label for="date">Date</label>
-                              <input type="date" class="form-control" id="inputDate" value="2020-05-29">
+                              <label for="inputDate-Modal4">Date</label>
+                              <input type="date" class="form-control" id="inputDate-Modal4" value="2020-05-29">
                             </div>
                             <div class="row form-group">
                               <div class="col-md-6">
-                                <label for="inputPark">Park</label>
-                                <select id="inputPark" class="col form-control">
+                                <label for="inputParkModal4">Park</label>
+                                <select id="inputParkModal4" class="col form-control">
                                   <option>Select a Park</option>
                                   <option selected>Magic Kingdom</option>
                                   <option>Epcot</option>
@@ -701,8 +716,8 @@
 
                             <!-- Attractions input button dropdown -->
                             <div class="row col form-group">
-                              <label for="inputPark">Attraction</label>
-                              <select id="inputPark" class="form-control">
+                              <label for="inputAttraction4">Attraction</label>
+                              <select id="inputAttraction4" class="form-control">
                                 <option>Select an Attraction</option>
                                 <option>Jungle Cruise</option>
                                 <option>Pirates of the Caribbean</option>
@@ -733,9 +748,9 @@
                             </div>
 
                             <!-- Time input -->
-                            <div class="form-group col-md-2 row" id="inputTime4">
-                              <div for="time">Time</div>
-                              <input type="time" class="form-control" id="inputTime4">
+                            <div class="form-group col-md-2 row">
+                              <div>Time</div>
+                              <input type="time" class="form-control" value="14:45">
                             </div>
 
                             <!-- Switch for FastPass+ -->
@@ -743,7 +758,7 @@
                             <div class="offset-md-3">
                               <div class="custom-control custom-switch">
                                 <div class="form-check">
-                                  <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch4">
+                                  <input type="checkbox" class="custom-control-input" id="inputFastPassSwitch4" checked>
                                   <label class="custom-control-label" for="inputFastPassSwitch4" data-toggle="tooltip"
                                     data-html="true"
                                     title="For a single theme park per day, you can make up to <b>3 FastPass+</b> selections in advance.">Reserve
@@ -752,29 +767,33 @@
                               </div>
                             </div>
                             <br />
+
+                            <!-- Ranking range -->
                             <div class="row">
                               <div class="col-md-6 offset-md-2">
-                                <label for="formControlRange">Ranking</label>
-                                <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
-                                  step="1">
+                                <label for="controlRange-Modal4">Ranking</label>
+                                <input type="range" class="form-control-range" id="controlRange-Modal4" min="1" max="5"
+                                  step="1" value="4">
                               </div>
                             </div>
 
                             <!-- Note input -->
                             <div class="col-md-8 row offset-md-1">
-                              <label for="inputNote">Notes</label>
-                              <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                              <label for="inputNote-Modal4">Notes</label>
+                              <textarea class="form-control" id="inputNote-Modal4" rows="1"
+                                placeholder="Notes"></textarea>
                             </div>
                             <br />
 
+
+                            <!-- Modal footer Buttons -->
+                            <div class="modal-footer">
+                              <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </form>
                         </div>
-                        <!-- Modal footer Buttons -->
-                        <div class="modal-footer">
-                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-                        </form>
                       </div>
                     </div>
                   </div>
@@ -794,7 +813,7 @@
               <td>
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="fastCheck1" disabled>
+                    <input class="form-check-input" type="checkbox" id="fastCheckRow5" disabled>
                   </div>
                 </div>
               </td>
@@ -805,17 +824,17 @@
               <td>
                 <div class="container">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleEditModal5">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal5">
                     Edit
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleEditModal5" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModal3Label5" aria-hidden="true">
+                  <div class="modal fade" id="editModal5" tabindex="-1" role="dialog"
+                    aria-labelledby="editModal5" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleEditModal5">Pirates of the Caribbean</h5>
+                          <h5 class="modal-title" id="editModal5-title">Pirates of the Caribbean</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                           </button>
@@ -842,7 +861,7 @@
                                 <td>
                                   <div class="col">
                                     <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" id="fastCheck5" disabled>
+                                      <input class="form-check-input" type="checkbox" id="fastCheckModal5" disabled>
                                     </div>
                                   </div>
                                 </td>
@@ -855,13 +874,13 @@
 
                           <form action="#" method="GET">
                             <div class="form-group col-md-2 row">
-                              <label for="date">Date</label>
-                              <input type="date" class="form-control" id="inputDate" value="2020-05-29">
+                              <label for="inputDate-Modal5">Date</label>
+                              <input type="date" class="form-control" id="inputDate-Modal5" value="2020-05-29">
                             </div>
                             <div class="row form-group">
                               <div class="col-md-6">
-                                <label for="inputPark">Park</label>
-                                <select id="inputPark" class="col form-control">
+                                <label for="inputParkModal5">Park</label>
+                                <select id="inputParkModal5" class="col form-control">
                                   <option>Select a Park</option>
                                   <option selected>Magic Kingdom</option>
                                   <option>Epcot</option>
@@ -872,8 +891,8 @@
                             </div>
 
                             <div class="row col form-group">
-                              <label for="inputPark">Attraction</label>
-                              <select id="inputPark" class="form-control">
+                              <label for="inputAttractionModal5">Attraction</label>
+                              <select id="inputAttractionModal5" class="form-control">
                                 <option>Select an Attraction</option>
                                 <option>Jungle Cruise</option>
                                 <option selected>Pirates of the Caribbean</option>
@@ -903,9 +922,9 @@
                               </select>
                             </div>
 
-                            <div class="form-group col-md-2 row" id="inputTime">
-                              <div for="time">Time</div>
-                              <input type="time" class="form-control" id="inputtime">
+                            <div class="form-group col-md-2 row">
+                              <div>Time</div>
+                              <input type="time" class="form-control" value="15:45">
                             </div>
 
                             <!-- Switch for FastPass+ -->
@@ -924,27 +943,29 @@
                             <br />
                             <div class="row">
                               <div class="col-md-6 offset-md-2">
-                                <label for="formControlRange">Ranking</label>
-                                <input type="range" class="form-control-range" id="formControlRange" min="1" max="5"
-                                  step="1">
+                                <label for="controlRange-Modal5">Ranking</label>
+                                <input type="range" class="form-control-range" id="controlRange-Modal5" min="1" max="5"
+                                  step="1" value="5">
                               </div>
                             </div>
 
                             <div class="col-md-8 row offset-md-1">
-                              <label for="inputNote">Notes</label>
-                              <textarea class="form-control" id="inputNote" rows="1" placeholder="Notes"></textarea>
+                              <label for="inputNote-Modal5">Notes</label>
+                              <textarea class="form-control" id="inputNote-Modal5" rows="1"
+                                placeholder="Notes"></textarea>
                             </div>
                             <br />
 
-                        </div>
 
-                        <!-- Modal footer Buttons -->
-                        <div class="modal-footer">
-                          <button type="reset" class="btn btn-outline-danger">Cancel</button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
+
+                            <!-- Modal footer Buttons -->
+                            <div class="modal-footer">
+                              <button type="reset" class="btn btn-outline-danger">Cancel</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </form>
                         </div>
-                        </form>
                       </div>
                     </div>
                   </div>
@@ -958,13 +979,12 @@
         </table>
       </div>
       <hr />
-    </div> <!-- End of Table -->
+    </section> <!-- End of Table -->
 
     <!-- Start of Form Container -->
-    <div class="col-md-10 offset-md-1 center">
+    <article class="col-md-10 offset-md-1 center">
       <div class="form-group row">
         <h2>Add to List</h2>
-
         <div class="col">
           <button type="button" class="btn btn-success" id="addBtn">Add</button>
         </div>
@@ -974,8 +994,8 @@
       <form action="#" method="GET">
         <div class="form-group row offset-md-3 center">
           <div class="col-md-4">
-            <label for="inputPark">Park</label>
-            <select id="inputPark" class="col form-control">
+            <label for="inputParkForm1">Park</label>
+            <select id="inputParkForm1" class="col form-control">
               <option>Select a Park</option>
               <option selected>Magic Kingdom</option>
               <option>Epcot</option>
@@ -984,18 +1004,18 @@
             </select>
           </div>
           <div class="form-group col-md-2 row">
-            <label for="date">Date</label>
-            <input type="date" class="form-control" id="inputDate">
+            <label for="inputDate-Form">Date</label>
+            <input type="date" class="form-control" id="inputDate-Form">
           </div>
         </div>
         <div class="form-group row offset-md-2 ">
           <div class="col-md-2">
-            <label for="formControlRange">Ranking</label>
-            <input type="range" class="form-control-range" id="formControlRange" min="1" max="5" step="1">
+            <label for="controlRangeAttractionsForm">Ranking</label>
+            <input type="range" class="form-control-range" id="controlRangeAttractionsForm" min="1" max="5" step="1">
           </div>
           <div class="form-group col-md-5">
-            <label for="inputPark">Attraction</label>
-            <select id="inputPark" class="form-control">
+            <label for="inputAttractionsForm1">Attraction</label>
+            <select id="inputAttractionsForm1" class="form-control">
               <option selected>Select an Attraction</option>
               <option>Jungle Cruise</option>
               <option>Pirates of the Caribbean</option>
@@ -1024,13 +1044,13 @@
               <option disabled>Tron Lightcycle Power Run</option>
             </select>
           </div>
-          <div class="form-group col-md-2 center row" id="inputTime">
-            <div for="time">Time</div>
-            <input type="time" class="form-control" id="inputtime">
+          <div class="form-group col-md-2 center row">
+            <div>Time</div>
+            <input type="time" class="form-control">
           </div>
         </div>
         <!-- Switch for FastPass+ -->
-        <div class="offset-md-3">
+        <div class="offset-md-4">
           <div class="form-check">
             <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
@@ -1043,8 +1063,8 @@
 
 
         <div class="col-md-8 row offset-md-2">
-          <label for="inputNote">Notes</label>
-          <textarea class="form-control" id="inputNote" rows="2" placeholder="Notes"></textarea>
+          <label for="inputNote-Form">Notes</label>
+          <textarea class="form-control" id="inputNote-Form" rows="2" placeholder="Notes"></textarea>
         </div>
         <br />
 
@@ -1052,29 +1072,34 @@
         <br />
         <div class="form-group row">
           <div class="col-sm-10">
-            <a class="btn btn-outline-primary" href="login.html" id="regbtn" role="button">Log In</a>
+            <a class="btn btn-outline-primary" href="login.html" id="logInBtn" role="button">Log In</a>
             <button type="reset" class="btn btn-outline-danger" id="canbtn">Cancel</button>
             <button type="submit" class="btn btn-outline-success">Add</button>
           </div>
-        </div>
-
-        <div class="form-group">
-          <h4>New List Name</h4>
-          <div><input type="text" name="listName" placeholder="New List Name" /></div>
-          <button type="button" class="btn btn-success" id="newListBtn">Create New List</button>
-        </div>
+        </div>      
 
       </form>
       <!-- End of Attractions Form -->
 
       <hr />
 
-    </div> <!-- End of Form Container -->
+    </article> <!-- End of Form Container -->
 
-    <br />
+    <!-- New List Form -->
+    <form action="#" method="GET"> 
+      <div class="container">
+        <h4>Create New List</h4>
+        <div class="row offset-md-3 col-md-6">
+            <!-- <label for="newListInput">Create New List</label> -->
+            <input type="text" class="form-control" id="newListInput" placeholder="New List Name" minlength="2" maxlength="40">
+            <button type="submit" class="btn btn-success" id="newListBtn">Create New List</button>
+        </div>
+        <hr />
+      </div>
+    </form> 
 
     <!-- Bottom row of columns -->
-    <div class="row">
+    <aside class="row">
       <div class="col-md-4">
         <h2>Get Started</h2>
         <!-- <img src="img/sm-PartnersStatue.jpg" alt="Partners Statue" class="prtnr img-thumbnail"> -->
@@ -1095,11 +1120,9 @@
         <p>Learn more about us here at Plan the Magic and our creator.</p>
         <p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>
       </div>
-    </div> <!-- end of Bottom row of columns -->
+    </aside> <!-- end of Bottom row of columns -->
 
     <hr>
-
-    </div> <!-- /container -->
 
   </main>
 
