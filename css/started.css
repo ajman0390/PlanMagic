@@ -5,14 +5,15 @@ body, html {
     color: #777;
   }
   
-  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  .bgimg-1, .bgimg-2, .bgimg-3, 
+  .bgimg-Epcot, .bgimg-StarWars,
+  .bgimg-Hollywood, .bgimg-Animal {
     position: relative;
     opacity: 0.65;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
   }
 
   .bgimg-1 {
@@ -30,10 +31,26 @@ body, html {
     min-height: 400px;
   }
 
-  .bgimg-4 {
-    background-image: url("../img/disneyworld1.jpg");
+  .bgimg-Epcot {
+    background-image: url("../img/spaceship-earth-epcot.jpg");
     min-height: 400px;
   }
+
+  .bgimg-StarWars {
+    background-image: url("../img/star-wars-disney-world.jpg");
+    min-height: 400px;
+  }
+
+  .bgimg-Hollywood {
+    background-image: url("../img/hollywood-studios-tower-of-terror.jpg");
+    min-height: 400px;
+  }
+  
+  .bgimg-Animal {
+    background-image: url("../img/animal-kingdom-expedition-everest.jpeg");
+    min-height: 400px;
+  }
+  
 
   
   .caption {
@@ -52,15 +69,22 @@ body, html {
     font-size: 25px;
     letter-spacing: 10px;
   }
-  
+
   h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: rgb(197, 186, 186);
+  }
+  
+  #img1Section h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
     color: #111;
   }
 
-  #bg-img1Section {
+  #img1Section {
     color: #777;
     background-color:white;
     text-align:center;
@@ -68,11 +92,16 @@ body, html {
     text-align: justify;
   }
 
+  #img1Section p,
+  #img1Section h3 {
+    text-align: center;
+  }
+
   #bg-img1 h3 {
     text-align:center;
   }
 
-  #scroll-4 {
+  .scroll {
     color:#ddd;
     background-color:#282E34;
     text-align:center;
@@ -86,31 +115,21 @@ body, html {
     color: #f7f7f7;
   }
 
-  #drop-5,
-  #img2Text {
+  .caption span.trnsBlk {
+    background-color:transparent;
+    font-size:25px;
+    color: #f7f7f7;
+  }
+
+  .imgSection {
     position:relative;
-  }
-
-  #scroll-6 {
-    color:#ddd;
-    background-color:#282E34;
     text-align:center;
-    padding:50px 80px;
-    text-align: justify;
   }
 
-  #drop-6 {
-    position:relative;
-  }
-
-  #scroll-7 {
-    color:#ddd;
-    background-color:#282E34;
+  .scroll p,
+  .scroll h3 {
     text-align:center;
-    padding:50px 80px;
-    text-align: justify;
   }
-
 
   #bgimg-2 span {
     background-color:transparent;
@@ -120,7 +139,8 @@ body, html {
   
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-Epcot,
+    .bgimg-Hollywood, .bgimg-Animal {
       background-attachment: scroll;
     }
   }

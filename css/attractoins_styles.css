@@ -17,8 +17,7 @@
     margin-left: .8em;
 }
 
-#listDelBtn,
-#listPrntBtn {
+.prntDelBtn {
     font-size: .9em;
     white-space: nowrap;
 }
