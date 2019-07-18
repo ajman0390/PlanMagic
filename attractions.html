@@ -26,16 +26,16 @@
   <!-- Start of Navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="index.html">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
+      aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="collapse navbar-collapse" id="navbarsDefault">
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="started.html">Get Started</a>
@@ -46,15 +46,15 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="login.html">Logout<span class="sr-only">(current)</span></a>
-          </li>
+          <a class="nav-link" href="login.html">Logout<span class="sr-only">(current)</span></a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <!-- Main header jumbotron -->
   <header>
-    <div class="jumbotron">
+    <div class="jumbotron jumbotron-fluid">
       <div class="container col-md-6">
         <h1 class="display-3 toph1">Plan the Magic!</h1>
         <p><img class="img-fluid bgTopImg" src="img/wdw-all.jpeg" alt="Walt Disney World"></p>
@@ -70,7 +70,7 @@
 
     <!-- Start of Table Container -->
     <section class="container col-md-10 offset-md-1 center">
-      <div class="form-group row">
+      <div class="form-group row topArea">
         <h2>Attraction Lists</h2>
         <div class="col offset-md-6">
           <div class="offset-md-4">
@@ -94,7 +94,7 @@
       </div>
 
       <!-- Start of Table -->
-      <div class="table-responsive">
+      <div class="table-responsive nostyle">
         <table class="table table-hover">
           <thead>
             <tr>
@@ -131,8 +131,10 @@
               <td>
                 <div class="container">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal1">
-                    Edit
+                  <button type="button" class="btn btn-warning modalEditBtn" data-toggle="modal"
+                    data-target="#editModal1">
+                    <!-- <i class="far fa-edit editFontA"></i>-->
+                    Edit 
                   </button>
 
                   <!-- Modal -->
@@ -1105,38 +1107,38 @@
     </form>
 
     <!-- Row of columns -->
-  <aside class="container">
+    <aside class="container">
       <hr />
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Get Started</h2>
-        <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
-        <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
-        <p><a class="btn btn-secondary" href="started.html" role="button">Get Started &raquo;</a></p>
+      <div class="row bottomRow">
+        <div class="col-md-4">
+          <h2>Get Started</h2>
+          <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
+          <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
+          <p><a class="btn btn-secondary" href="started.html" role="button">Get Started &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Attractions</h2>
+          <img src="img/exlg-Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
+          <p>Review the Attractions Planner to assist in planning your trip to Walt Disney World. </p>
+          <p><a class="btn btn-secondary" href="attractions.html" role="button">Attractions &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>About Us</h2>
+          <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
+          <p>Learn more about us here at Plan the Magic and our creator.</p>
+          <p><a class="btn btn-secondary" href="about.html" role="button">About Us &raquo;</a></p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h2>Attractions</h2>
-        <img src="img/exlg-Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
-        <p>Review the Attractions Planner to assist in planning your trip to Walt Disney World. </p>
-        <p><a class="btn btn-secondary" href="attractions.html" role="button">Attractions &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>About Us</h2>
-        <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
-        <p>Learn more about us here at Plan the Magic and our creator.</p>
-        <p><a class="btn btn-secondary" href="about.html" role="button">About Us &raquo;</a></p>
-      </div>
-    </div>
-  </aside> <!-- /container -->
+    </aside> <!-- /container -->
 
-   
+
 
   </main>
 
   <!-- Start of Footer -->
   <footer class="container">
-      <p>&copy; Plan the Magic 2019 Credit to <a href="https://disneyworld.disney.go.com/">Disney</a></p>
-    </footer>
+    <p>&copy; Plan the Magic 2019 Credit to <a href="https://disneyworld.disney.go.com/">Disney</a></p>
+  </footer>
 
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

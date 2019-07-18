@@ -7,7 +7,6 @@
     float: right;
   }
 
-
 #deleteListBtn {
     margin-top: .4em;
     margin-left: .8em;
@@ -47,21 +46,47 @@ input.form-control {
     width: auto;
   }
 
-  // Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        /* background-color: blue; */
+        font-weight: 600;
+    }  
+    
+    .jumbotron {
+        display: none;
+    }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+    .nostyle table {
+        font-size: 1.25em;
+        width: 50%;
+    }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
- }
+    .topArea {
+        display: inline-block;
+        padding: .4em;
+    }
+} 
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+    
+      
+} 
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+      
+
+    
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+     
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+     
+} 
