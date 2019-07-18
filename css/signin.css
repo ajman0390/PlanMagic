@@ -1,63 +1,86 @@
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
 
+.jumbotron h2 {
+  text-align: center;
+  color: rgba(2, 11, 20, 0.548);
+}
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-  html,
-  body {
-    height: 100%;
-  }
+footer p {
+  float: right;
+}
+h1 {
+font-family: 'Josefin Sans', sans-serif;
+padding: .4em;
+}
+
+.carousel-item img {
+  object-fit: contain;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: .4em;
+}
+
+.carousel {
+
+  height:360px;
   
-  body {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #f5f5f5; 
-  }
-
- /* #signMain {
-    background-image: url("../img/walt-castle.jpg");
-  } */
+}
   
-  .form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+.carousel-item img {
+  
+  height:360px;
+  
+  object-fit: contain;
+  
+}
+
+  html {
+  font-size: 1rem;
+}
+
+.bottomRow p,
+.bottomRow h2 {
+  text-align: center;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
   }
-  .form-signin .checkbox {
-    font-weight: 400;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
   }
-  .form-signin .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
   }
-  .form-signin .form-control:focus {
-    z-index: 2;
-  }
-  .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+.bd-placeholder-img-lg {
+  font-size: 3.5rem;
+}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }

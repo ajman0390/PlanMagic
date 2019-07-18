@@ -4,6 +4,15 @@ body, html {
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
   }
+
+  h1 {
+    color: #282E34;
+    text-align: center;
+  }
+
+  #firstP {
+    text-align: center;
+  }
   
   .bgimg-Mickey, .bgimg-Magic, .bgimg-Walt, 
   .bgimg-Epcot, .bgimg-StarWars,
