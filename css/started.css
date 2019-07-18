@@ -5,7 +5,7 @@ body, html {
     color: #777;
   }
   
-  .bgimg-1, .bgimg-2, .bgimg-3, 
+  .bgimg-Mickey, .bgimg-Magic, .bgimg-Walt, 
   .bgimg-Epcot, .bgimg-StarWars,
   .bgimg-Hollywood, .bgimg-Animal {
     position: relative;
@@ -16,17 +16,17 @@ body, html {
     background-size: cover;
   }
 
-  .bgimg-1 {
+  .bgimg-Mickey {
     background-image: url("../img/mice-castle.jpg");
     min-height: 400px;
   }
   
-  .bgimg-2 {
+  .bgimg-Magic {
     background-image: url("../img/wdw-fireworks.jpg");
     min-height: 400px;
   }
   
-  .bgimg-3 {
+  .bgimg-Walt {
     background-image: url("../img/disneyopening.jpg");
     min-height: 400px;
   }
@@ -50,8 +50,6 @@ body, html {
     background-image: url("../img/animal-kingdom-expedition-everest.jpeg");
     min-height: 400px;
   }
-  
-
   
   .caption {
     position: absolute;
@@ -93,12 +91,10 @@ body, html {
   }
 
   #img1Section p,
-  #img1Section h3 {
+  #img1Section h3,
+  .scroll p,
+  .scroll h3 {
     text-align: center;
-  }
-
-  #bg-img1 h3 {
-    text-align:center;
   }
 
   .scroll {
@@ -107,12 +103,6 @@ body, html {
     text-align:center;
     padding:50px 80px;
     text-align: justify;
-  }
-
-  #scroll-5 {
-    background-color:transparent;
-    font-size:25px;
-    color: #f7f7f7;
   }
 
   .caption span.trnsBlk {
@@ -125,21 +115,10 @@ body, html {
     position:relative;
     text-align:center;
   }
-
-  .scroll p,
-  .scroll h3 {
-    text-align:center;
-  }
-
-  #bgimg-2 span {
-    background-color:transparent;
-    font-size:25px;
-    color: #f7f7f7;
-  }
   
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-Epcot,
+    .bgimg-Mickey, .bgimg-Magic, .bgimg-Walt, .bgimg-Epcot,
     .bgimg-Hollywood, .bgimg-Animal {
       background-attachment: scroll;
     }
