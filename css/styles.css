@@ -3,6 +3,17 @@ body {
     padding-top: 3.5rem;
   }
 
+  h1 {
+    color: #282E34;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: .4em;
+  }
+
+  #firstP {
+    text-align: center;
+  }
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -17,10 +28,10 @@ body {
 footer p {
     float: right;
 }
-h1 {
+/* h1 {
   font-family: 'Josefin Sans', sans-serif;
   padding: .4em;
-}
+} */
 
 .carousel {
 

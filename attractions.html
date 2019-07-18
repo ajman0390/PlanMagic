@@ -33,17 +33,21 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
         <li class="nav-item">
           <a class="nav-link" href="started.html">Get Started</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link active" href="attractions.html">Attractions</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="attractions.html">Attractions</a>
-        </li>
+            <a class="nav-link" href="login.html">Logout<span class="sr-only">(current)</span></a>
+          </li>
       </ul>
     </div>
   </nav>
@@ -56,7 +60,7 @@
         <p><img class="img-fluid bgTopImg" src="img/wdw-all.jpeg" alt="Walt Disney World"></p>
         <p>Create lists to assist in planning the most for your Walt Disney World Vacation.</p>
         <p id="logOutBtn" class="offset-md-5"><a class="btn btn-outline-primary btn-lg" href="index.html"
-            role="button">Log Out
+            role="button">Logout
             &raquo;</a></p>
       </div>
     </div>
@@ -1074,7 +1078,7 @@
         <br />
         <div class="form-group row">
           <div class="col-sm-10">
-            <a class="btn btn-outline-primary" href="index.html" id="logOutBtn2" role="button">Log Out</a>
+            <a class="btn btn-outline-primary" href="index.html" id="logOutBtn2" role="button">Logout</a>
             <button type="reset" class="btn btn-outline-danger" id="canbtn">Cancel</button>
             <button type="submit" class="btn btn-outline-success">Add</button>
           </div>
@@ -1097,45 +1101,42 @@
             maxlength="40">
           <button type="submit" class="btn btn-success" id="newListBtn">Create New List</button>
         </div>
-        <hr />
       </div>
     </form>
 
-    <!-- Bottom row of columns -->
-    <aside class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Get Started</h2>
-          <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
-          <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
-          <p><a class="btn btn-secondary" href="login.html" role="button">Start Journey &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Attractions</h2>
-          <img src="img/exlg-Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
-          <p>Review the Attractions Planner to assist in planning your trip to Walt Disney World. </p>
-          <p><a class="btn btn-secondary" href="attractions.html" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>About Us</h2>
-          <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
-          <p>Learn more about us here at Plan the Magic and our creator.</p>
-          <p><a class="btn btn-secondary" href="about.html" role="button">View details &raquo;</a></p>
-        </div>
+    <!-- Row of columns -->
+  <aside class="container">
+      <hr />
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Get Started</h2>
+        <img src="img/Toy-Story-Land.jpg" alt="Woody" class="woody img-thumbnail">
+        <p>Get started in reviewing all Walt Disney World Resort has to offer. </p>
+        <p><a class="btn btn-secondary" href="started.html" role="button">Get Started &raquo;</a></p>
       </div>
+      <div class="col-md-4">
+        <h2>Attractions</h2>
+        <img src="img/exlg-Space-Mountain.jpg" alt="Space-Mountain" class="spcMt img-thumbnail">
+        <p>Review the Attractions Planner to assist in planning your trip to Walt Disney World. </p>
+        <p><a class="btn btn-secondary" href="attractions.html" role="button">Attractions &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>About Us</h2>
+        <img src="img/mice-castle.jpg" alt="Mickey and Minnie Mouse" class="mMouse img-thumbnail">
+        <p>Learn more about us here at Plan the Magic and our creator.</p>
+        <p><a class="btn btn-secondary" href="about.html" role="button">About Us &raquo;</a></p>
+      </div>
+    </div>
+  </aside> <!-- /container -->
 
-      <hr>
-
-    </aside> <!-- /container -->
-
-    <hr>
+   
 
   </main>
 
   <!-- Start of Footer -->
   <footer class="container">
-    <p>&copy; Plan the Magic 2019 <a href="https://disneyworld.disney.go.com/" target="new">Credit to Disney</a></p>
-  </footer>
+      <p>&copy; Plan the Magic 2019 Credit to <a href="https://disneyworld.disney.go.com/">Disney</a></p>
+    </footer>
 
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
