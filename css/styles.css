@@ -24,13 +24,13 @@ h1 {
 
 .carousel {
 
-  height:360px;
+  /* height:360px; */
   
   }
   
   .carousel-item img {
   
-  height:360px;
+  /* height:360px; */
   
   object-fit: contain;
   
